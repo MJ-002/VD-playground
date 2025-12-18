@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>착시 체험하기 | 시각디자인 훈련소</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+<!-- 공통 사운드 -->
+<audio id="bgm" src="mewpot.mp3" loop></audio>
+<audio id="click-sound" src="click.mp3"></audio>
+
+
+<div class="page-wrapper">
+  <button class="home-btn" onclick="location.href='index.html'">HOME</button>
+  <button class="back-btn" onclick="location.href='index.html'">BACK</button>
+
+  <div class="illusion-page">
+    <h1>착시 체험하기</h1>
+    <p>이미지를 클릭하고 스크롤 바를 이용하여 좌우로 움직여 보세요.</p>
+
+    <div class="illusion-grid" id="illusionGrid">
+    </div>
+  </div>
+
+  <!-- 모달 -->
+  <div class="illusion-modal" id="illusionModal">
+    <div class="modal-content">
+   
+
+      <div class="illusion-view">
+        <img id="bottomImg" class="bottom-img">
+        <img id="topImg" class="top-img">
+      </div>
+
+      <input type="range" id="slider" min="0" max="100" value="0">
+
+    </div>
+  </div>
+
+  <script src="illusion.js"></script>
+  <script src="sound.js"></script>
+</div>
+</body>
+</html>
